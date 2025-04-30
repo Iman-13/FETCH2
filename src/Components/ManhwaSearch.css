@@ -1,0 +1,253 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .manhwa-search-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #39FF14;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .search-input {
+    width: 60%;
+    padding: 12px 16px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    padding: 12px 24px;
+    background-color: #39FF14;
+    color: black;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .search-button:hover {
+    background-color: #32d812;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .manhwa-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .manhwa-table th {
+    background-color: #2d2d2d;
+    padding: 15px;
+    text-align: left;
+    color: #39FF14;
+    border-bottom: 2px solid #444;
+  }
+  
+  .manhwa-table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+  }
+  
+  .manhwa-table tbody tr:nth-child(even) {
+    background-color: #242424;
+  }
+  
+  .manhwa-table tbody tr:hover {
+    background-color: #333;
+  }
+  
+  .manhwa-table td:first-child {
+    width: 50px;
+    text-align: center;
+    font-weight: 500;
+    color: #aaa;
+  }
+  
+  .manhwa-table td:nth-child(2) img {
+    border-radius: 4px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    padding: 8px 16px;
+    background-color: #17580c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.2s;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background-color: #224b19;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  .page-info {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0 15px;
+  }
+  
+  .loading-indicator {
+    text-align: center;
+    padding: 20px;
+    color: #39FF14;
+    font-size: 18px;
+  }
+  
+  .error-message {
+    text-align: center;
+    padding: 15px;
+    background-color: #4a1c1c;
+    color: #ff6b6b;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 30px;
+    color: #bbb;
+    font-size: 18px;
+    background-color: #222;
+    border-radius: 4px;
+  }
+  
+  .upload-section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: 1px solid #333;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .upload-input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .file-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+    border: 1px dashed #39FF14;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+  
+  .title-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px 15px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .preview-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 4px;
+  }
+  
+  .image-preview {
+    max-width: 150px;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+  
+  .upload-status {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .upload-status.success {
+    color: #39FF14;
+    font-weight: bold;
+  }
+  
+  .upload-button {
+    padding: 12px 24px;
+    background-color: #39FF14;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+  }
+  
+  .upload-button:hover:not(:disabled) {
+    background-color: #32d812;
+  }
+  
+  .upload-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  .manhwa-thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  
