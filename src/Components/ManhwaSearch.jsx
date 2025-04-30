@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './ManhwaSearch.css';
 
 function ManhwaSearch() {
@@ -14,7 +14,8 @@ function ManhwaSearch() {
   const [previewImage, setPreviewImage] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
 
-  const fetchManhwas = async () => {
+  // Memoize the fetchManhwas function to prevent unnecessary re-creations
+  const fetchManhwas = useCallback(async () => {
     if (!query) return;
 
     setLoading(true);
@@ -39,11 +40,11 @@ function ManhwaSearch() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [query, page]); // This ensures fetchManhwas is updated when query or page changes
 
   useEffect(() => {
     fetchManhwas();
-  }, [query, page]);
+  }, [fetchManhwas]);  // Add fetchManhwas to the dependency array
 
   const handleSubmit = (e) => {
     e.preventDefault();
