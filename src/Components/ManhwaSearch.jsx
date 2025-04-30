@@ -316,7 +316,7 @@ function ManhwaSearch() {
     );
   };
 
-  // Function to paginate mock data
+  // Function to paginate mock data ensuring exactly 10 items per page
   const paginateMockData = (data, currentPage, itemsPerPage = 10) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -366,10 +366,14 @@ function ManhwaSearch() {
         
         // Fallback to mock data
         const filteredMock = filterMockData(query);
-        const paginatedData = paginateMockData(filteredMock, page);
         
-        setManhwaList(paginatedData.items);
-        setHasNextPage(paginatedData.hasMore);
+        // Always show 10 items per page
+        const startIndex = (page - 1) * 10;
+        const endIndex = startIndex + 10;
+        const pageItems = filteredMock.slice(startIndex, endIndex);
+        
+        setManhwaList(pageItems);
+        setHasNextPage(endIndex < filteredMock.length);
         setUseMockData(true);
         
         // Only show error if no mock data matches
